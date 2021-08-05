@@ -5,10 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet"> 
     <script defer src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"></script>
     <title>Weather App</title>
 </head>
 <body>
-    <h1>hello, world!</h1>
+    <header class="header">
+        <h1 class="heading heading--main">
+            <span>☀️</span>City Weather App<span>🌧️</span>
+        </h1>
+    </header>
+    <main class="main-content">
+        <div class="loader hidden"></div>
+        <canvas id="myChart" width="400" height="110"></canvas>
+        <form action="" method="POST" onsubmit="return false">
+            <div class="city-submission">
+                <label for="city">Enter City</label>
+                <input id="city" name="city" type="text" placeholder="ENTER CITY">
+            </div>
+            <input class="submit-button" type="submit" value="Enter">
+        </form>
+    </main>
 </body>
 </html>
